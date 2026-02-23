@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fi">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,8 +26,8 @@
 
       <div class="lang">
         <span class="hint" data-i18n="lang_label">Language</span>
-        <button id="btnFi" type="button">FI</button>
         <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
       </div>
     </header>
 
@@ -109,7 +109,7 @@
 
         <h3 data-i18n="pp_contact_h">Contact</h3>
         <p data-i18n="pp_contact_p">
-          For privacy questions or deletion requests, contact: <b>[YOUR_SUPPORT_EMAIL]</b>
+          For privacy questions or deletion requests, contact: <b>janstech.apps@gmail.com</b>
         </p>
 
         <p class="footer">
@@ -149,71 +149,6 @@
 
   <script>
     const dict = {
-      fi: {
-        nav_privacy: "Tietosuoja",
-        nav_support: "Tuki",
-        nav_terms: "Käyttöehdot",
-        nav_delete: "Poista tiedot",
-        lang_label: "Kieli",
-        badge: "Päivitetty",
-        title: "Tietosuojakäytäntö",
-        subtitle: "Tällä sivulla kerrotaan, mitä tietoja WaveIQ Radio käsittelee, miksi, sekä miten voit pyytää tietojen poistamista.",
-
-        pp_overview_h: "Yleiskuva",
-        pp_overview_p: "WaveIQ Radio on “personal listening intelligence” -radio. Sovellus voi tallentaa asemat laitteelle ja (valinnaisesti) lähettää kuuntelutapahtumia taustajärjestelmään history-pohjaisia suosituksia ja stream health -validointia varten.",
-
-        pp_data_h: "Mitä tietoja käsitellään",
-        pp_data_note: "Pidämme datankeruun minimissä. Osa ominaisuuksista toimii ilman historian lähettämistä backendiin (riippuen buildistä / asetuksista).",
-        pp_data_1: "<b>Sovellusinstanssin tunniste</b> (satunnainen laite/app-id, ei oikea nimesi) tapahtumien ryhmittämiseen saman asennuksen alle.",
-        pp_data_2: "<b>Kuuntelutapahtumat</b> (aseman aloitus, kuuntelusessiot) makutason signaalien muodostamiseen.",
-        pp_data_3: "<b>Now playing -metadata</b> (kappaleen otsikkoteksti, station id) suositusten parantamiseen ja deduplikointiin.",
-        pp_data_4: "<b>Stream health</b> (onnistui/epäonnistui, ajoitus) hiljaisten/rikkoutuneiden streamien suodattamiseen.",
-        pp_data_5: "<b>AI-käyttölaskurit</b> (päivittäiset kutsut/tokenit/quota-hit) reilun käytön ja abuse-eston toteuttamiseen.",
-        pp_data_6: "<b>Firebase Analytics</b> (jos käytössä buildissä) vakauden ja käytön mittaamiseen.",
-        pp_data_7: "<b>App Check -tokenit</b> turvallisuusvalidointiin. Tokenit verifioidaan, jotta pyynnöt tulevat aidosta sovellusinstanssista.",
-
-        pp_purpose_h: "Miksi tietoja käsitellään",
-        pp_purpose_1: "Perustoiminnallisuuksien tarjoamiseen (toisto, asemien tallennus, uniajastin).",
-        pp_purpose_2: "<b>History-pohjaisten suositusten</b> ja taste-profiilin tuottamiseen.",
-        pp_purpose_3: "Hiljaisten/rikkoutuneiden streamien tunnistamiseen ja toiston luotettavuuden parantamiseen.",
-        pp_purpose_4: "Backendin ja AI-endpointtien suojaamiseen väärinkäytöltä (App Check, quota).",
-        pp_purpose_5: "Sovelluksen laadun kehittämiseen (crash/käyttöanalytiikka jos käytössä).",
-
-        pp_storage_h: "Missä data säilytetään",
-        pp_storage_1: "<b>Laitteella:</b> Tallennetut asemat, asetukset ja (valinnaiset) varmuuskopiot säilytetään laitteellasi.",
-        pp_storage_2: "<b>Backend:</b> Kuunteludata ja johdettu taste-profiili voidaan tallentaa tietokantaan (MariaDB) suosituksia varten.",
-        pp_storage_3: "<b>Firebase:</b> App Check (turva) ja (valinnaisesti) Analytics.",
-
-        pp_sharing_h: "Tietojen luovutus",
-        pp_sharing_p: "Emme myy tietojasi. Tietoja voidaan käsitellä palveluntarjoajien toimesta sovelluksen operointia varten (esim. Firebase, hosting). AI-kutsut (jos käytössä) voivat kulkea valitun AI-palvelun kautta.",
-
-        pp_retention_h: "Säilytysaika",
-        pp_retention_p: "Säilytämme backend-telemetrian vain niin kauan kuin se on tarpeen suosituksille, analytiikalle ja turvallisuudelle. Voit pyytää poistamista (katso “Poista tiedot”).",
-
-        pp_security_h: "Tietoturva",
-        pp_security_1: "AI-endpointit on suojattu <b>Firebase App Checkillä (Play Integrity)</b>.",
-        pp_security_2: "Tieto siirtyy HTTPS-yhteydellä.",
-        pp_security_3: "Lokia kerätään vain tarvittava määrä debuggausta ja abuse-estämistä varten.",
-
-        pp_contact_h: "Yhteys",
-        pp_contact_p: "Tietosuoja- ja poistopyynnöt: <b>[YOUR_SUPPORT_EMAIL]</b>",
-
-        pp_footer: "Tätä käytäntöä voidaan päivittää ominaisuuksien kehittyessä. Yläreunan “Päivitetty”-päivä kertoo viimeisimmän version.",
-
-        quick_h: "Pikalinkit",
-        quick_delete: "Miten tietoja poistetaan",
-        quick_support: "Tuki",
-        quick_terms: "Käyttöehdot",
-
-        facts_h: "Mitä WaveIQ tallentaa laitteelle",
-        facts_1: "Tallennettu asemalista",
-        facts_2: "Suosikit ja järjestys",
-        facts_3: "Asetukset (teema, ajastin jne.)",
-        facts_4: "Valinnainen varmuuskopio (Drive AppData jos käytössä)",
-
-        build_h: "Build-huomio",
-        build_p: "Debug-buildit voivat käyttää kehitystä varten debug App Check -provideria. Release/closed-test käyttää Play Integrityä."
-      },
       en: {
         nav_privacy: "Privacy",
         nav_support: "Support",
@@ -261,7 +196,7 @@
         pp_security_3: "We log only what is necessary for debugging and abuse prevention.",
 
         pp_contact_h: "Contact",
-        pp_contact_p: "For privacy questions or deletion requests, contact: <b>[YOUR_SUPPORT_EMAIL]</b>",
+        pp_contact_p: "For privacy questions or deletion requests, contact: <b>janstech.apps@gmail.com</b>",
 
         pp_footer: "This policy may change as features evolve. The “Updated” date at the top indicates the latest revision.",
 
@@ -278,12 +213,77 @@
 
         build_h: "Build notes",
         build_p: "Debug builds may use a debug App Check provider for development. Release/closed-test builds use Play Integrity."
+      },
+      fi: {
+        nav_privacy: "Tietosuoja",
+        nav_support: "Tuki",
+        nav_terms: "Käyttöehdot",
+        nav_delete: "Poista tiedot",
+        lang_label: "Kieli",
+        badge: "Päivitetty",
+        title: "Tietosuojakäytäntö",
+        subtitle: "Tällä sivulla kerrotaan, mitä tietoja WaveIQ Radio käsittelee, miksi, sekä miten voit pyytää tietojen poistamista.",
+
+        pp_overview_h: "Yleiskuva",
+        pp_overview_p: "WaveIQ Radio on “personal listening intelligence” -radio. Sovellus voi tallentaa asemat laitteelle ja (valinnaisesti) lähettää kuuntelutapahtumia taustajärjestelmään history-pohjaisia suosituksia ja stream health -validointia varten.",
+
+        pp_data_h: "Mitä tietoja käsitellään",
+        pp_data_note: "Pidämme datankeruun minimissä. Osa ominaisuuksista toimii ilman historian lähettämistä backendiin (riippuen buildistä / asetuksista).",
+        pp_data_1: "<b>Sovellusinstanssin tunniste</b> (satunnainen laite/app-id, ei oikea nimesi) tapahtumien ryhmittämiseen saman asennuksen alle.",
+        pp_data_2: "<b>Kuuntelutapahtumat</b> (aseman aloitus, kuuntelusessiot) makutason signaalien muodostamiseen.",
+        pp_data_3: "<b>Now playing -metadata</b> (kappaleen otsikkoteksti, station id) suositusten parantamiseen ja deduplikointiin.",
+        pp_data_4: "<b>Stream health</b> (onnistui/epäonnistui, ajoitus) hiljaisten/rikkoutuneiden streamien suodattamiseen.",
+        pp_data_5: "<b>AI-käyttölaskurit</b> (päivittäiset kutsut/tokenit/quota-hit) reilun käytön ja abuse-eston toteuttamiseen.",
+        pp_data_6: "<b>Firebase Analytics</b> (jos käytössä buildissä) vakauden ja käytön mittaamiseen.",
+        pp_data_7: "<b>App Check -tokenit</b> turvallisuusvalidointiin. Tokenit verifioidaan, jotta pyynnöt tulevat aidosta sovellusinstanssista.",
+
+        pp_purpose_h: "Miksi tietoja käsitellään",
+        pp_purpose_1: "Perustoiminnallisuuksien tarjoamiseen (toisto, asemien tallennus, uniajastin).",
+        pp_purpose_2: "<b>History-pohjaisten suositusten</b> ja taste-profiilin tuottamiseen.",
+        pp_purpose_3: "Hiljaisten/rikkoutuneiden streamien tunnistamiseen ja toiston luotettavuuden parantamiseen.",
+        pp_purpose_4: "Backendin ja AI-endpointtien suojaamiseen väärinkäytöltä (App Check, quota).",
+        pp_purpose_5: "Sovelluksen laadun kehittämiseen (crash/käyttöanalytiikka jos käytössä).",
+
+        pp_storage_h: "Missä data säilytetään",
+        pp_storage_1: "<b>Laitteella:</b> Tallennetut asemat, asetukset ja (valinnaiset) varmuuskopiot säilytetään laitteellasi.",
+        pp_storage_2: "<b>Backend:</b> Kuunteludata ja johdettu taste-profiili voidaan tallentaa tietokantaan (MariaDB) suosituksia varten.",
+        pp_storage_3: "<b>Firebase:</b> App Check (turva) ja (valinnaisesti) Analytics.",
+
+        pp_sharing_h: "Tietojen luovutus",
+        pp_sharing_p: "Emme myy tietojasi. Tietoja voidaan käsitellä palveluntarjoajien toimesta sovelluksen operointia varten (esim. Firebase, hosting). AI-kutsut (jos käytössä) voivat kulkea valitun AI-palvelun kautta.",
+
+        pp_retention_h: "Säilytysaika",
+        pp_retention_p: "Säilytämme backend-telemetrian vain niin kauan kuin se on tarpeen suosituksille, analytiikalle ja turvallisuudelle. Voit pyytää poistamista (katso “Poista tiedot”).",
+
+        pp_security_h: "Tietoturva",
+        pp_security_1: "AI-endpointit on suojattu <b>Firebase App Checkillä (Play Integrity)</b>.",
+        pp_security_2: "Tieto siirtyy HTTPS-yhteydellä.",
+        pp_security_3: "Lokia kerätään vain tarvittava määrä debuggausta ja abuse-estämistä varten.",
+
+        pp_contact_h: "Yhteys",
+        pp_contact_p: "Tietosuoja- ja poistopyynnöt: <b>janstech.apps@gmail.com</b>",
+
+        pp_footer: "Tätä käytäntöä voidaan päivittää ominaisuuksien kehittyessä. Yläreunan “Päivitetty”-päivä kertoo viimeisimmän version.",
+
+        quick_h: "Pikalinkit",
+        quick_delete: "Miten tietoja poistetaan",
+        quick_support: "Tuki",
+        quick_terms: "Käyttöehdot",
+
+        facts_h: "Mitä WaveIQ tallentaa laitteelle",
+        facts_1: "Tallennettu asemalista",
+        facts_2: "Suosikit ja järjestys",
+        facts_3: "Asetukset (teema, ajastin jne.)",
+        facts_4: "Valinnainen varmuuskopio (Drive AppData jos käytössä)",
+
+        build_h: "Build-huomio",
+        build_p: "Debug-buildit voivat käyttää kehitystä varten debug App Check -provideria. Release/closed-test käyttää Play Integrityä."
       }
     };
 
     function setLang(lang){
       localStorage.setItem("lang", lang);
-      document.documentElement.lang = lang === "fi" ? "fi" : "en";
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
 
       for (const el of document.querySelectorAll("[data-i18n]")){
         const key = el.getAttribute("data-i18n");
@@ -294,7 +294,7 @@
       document.getElementById("btnEn").classList.toggle("active", lang === "en");
     }
 
-    const saved = localStorage.getItem("lang") || "fi";
+    const saved = localStorage.getItem("lang") || "en";
     document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
     document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
     setLang(saved);
